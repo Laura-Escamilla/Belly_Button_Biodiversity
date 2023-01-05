@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-image: url(https://www.clorox.com/wp-content/uploads/2021/10/killing-germs-bacteria-viruses.jpg?width=1040&height=585&fit=crop)">
+        <h1 id="heading">Belly Button Biodiversity Dashboard</h1>
+        <p id="paragraph">Use the interactive charts below to explore the dataset</p>
+      <script>document.getElementById("heading").style.color = "white";</script>
+      <script>document.getElementById("paragraph").style.color = "white";</script>
+      <script>document.getElementById("heading").style.fontFamily = "Papyrus,serif";</script>
+      <script>document.getElementById("paragraph").style.fontFamily = "Avenir,serif";</script>
+      
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center white-text">
+        <h2 id="title">About this Project...</h2>
+        <p id="description">We've created this dashboard to display information about bacteria that live inside the human's belly button from a sample of hundreds of people. As we can see below, the dashboard show us the demographic information, the top ten bacteria cultures found, how frequently they wash their belly button, and the bacteria cultures per sample.</p>
+        <script>document.getElementById("title").style.fontStyle = "italic";</script>
+        <script>document.getElementById("description").style.fontStyle = "Avenir";</script>
+        <script>document.getElementById("title").style.fontFamily = "Avenir,serif";</script>
+        <script>document.getElementById("description").style.fontFamily = "Avenir,serif";</script>
+      </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+  <!-- <script src="./samples.json"></script> -->
+
+</body>
+
+</html>
